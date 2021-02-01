@@ -1,6 +1,6 @@
 /* Global Variables */
 const api_key = "81cd09972d20ff83dbd8f177098b64b4";
-const base_url = "http://api.openweathermap.org/data/2.5/weather";
+const base_url = "https://api.openweathermap.org/data/2.5/weather";
 const query_string = "?";
 //example http://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=81cd09972d20ff83dbd8f177098b64b4
 // Create a new date instance dynamically with JS
@@ -24,7 +24,7 @@ async function generateData() {
 }
 
 async function post_data_to_server(data) {
-    fetch(`http://localhost:3000/projectData`, {
+    fetch(`/projectData`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json'
